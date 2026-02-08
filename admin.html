@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Risol Mama</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="login-screen">
+      <div class="login-container">
+        <h2>Admin Login</h2>
+        <input
+          type="password"
+          id="admin-password"
+          placeholder="Masukkan password admin"
+        />
+        <button onclick="login()">Login</button>
+        <p id="login-message"></p>
+      </div>
+    </div>
+
+    <div id="admin-panel" style="display: none">
+      <header>
+        <div class="header-content">
+          <h1>Admin Panel - Risol Mama</h1>
+          <button onclick="logout()">Logout</button>
+        </div>
+      </header>
+
+      <main>
+        <section id="feedback-management">
+          <h2>Kelola Feedback</h2>
+          <div id="feedback-list-admin"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="admin-script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Risol Mama - Toko Online</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="loading-screen">
+      <img src="risolmamabg.png" alt="Risol Mama Logo" class="loading-logo" />
+    </div>
+    <header>
+      <div class="header-content">
+        <img src="risolmamabg.png" alt="Risol Mama Logo" class="logo" />
+        <div class="title-section">
+          <h1 id="title">Risol Mama</h1>
+          <p>Pesan risol mama enak dan murah!</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="products">
+        <h2>Produk Kami</h2>
+        <div class="product">
+          <img src="risolmayo.png" alt="Risol Mayo" />
+          <h3>Risol Mayo Original</h3>
+          <div class="average-rating">
+            <span class="average-stars"></span>
+            <span class="average-rating-text"></span>
+          </div>
+          <p>Harga: Rp 2.000</p>
+          <div class="quantity-controls">
+            <button onclick="addToCart('Risol Mama Original', 2000, -1)">
+              -
+            </button>
+            <span id="cart-quantity-Risol Mama Original">0</span>
+            <button onclick="addToCart('Risol Mama Original', 2000, 1)">
+              +
+            </button>
+          </div>
+        </div>
+        <!-- Tambah produk lain jika perlu -->
+      </section>
+
+      <section id="cart">
+        <h2>Keranjang Belanja</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: Rp <span id="total">0</span></p>
+        <button onclick="orderViaWhatsApp()">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+            style="width: 20px; height: 20px; margin-right: 5px"
+          />
+          Pesan via WhatsApp
+        </button>
+      </section>
+
+      <section id="feedback">
+        <h2>Kritik dan Saran</h2>
+        <div class="rating">
+          <label for="rating">Beri Rating:</label>
+          <div class="stars" id="stars">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+        </div>
+        <input
+          type="text"
+          id="feedback-name"
+          placeholder="Nama Anda (opsional)"
+          style="
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #d4c5a9;
+            border-radius: 8px;
+            font-family: &quot;Roboto&quot;, sans-serif;
+            font-size: 1rem;
+            box-sizing: border-box;
+          "
+        />
+        <textarea
+          id="feedback-text"
+          placeholder="Tulis kritik atau saran Anda di sini..."
+          rows="4"
+        ></textarea>
+        <button onclick="sendFeedback()">Kirim</button>
+      </section>
+
+      <section id="saved-feedback">
+        <h2>Feedback Tersimpan</h2>
+        <div id="feedback-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Gawerxyz</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
