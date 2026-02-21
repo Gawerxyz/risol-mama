@@ -15,7 +15,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, "public")));
 
 // API Routes
 app.post("/api/feedback", async (req, res) => {
